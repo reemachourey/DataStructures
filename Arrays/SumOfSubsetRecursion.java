@@ -33,7 +33,7 @@ public class SumOfSubsetRecursion{
 	/*	}*/
 	}
 
-  public void sumOfSubset(int [] arr, int index, int sum){
+  public boolean isSubsetSum(int [] arr, int index, int sum){
     if(sum==0)
       return true;
 
@@ -43,8 +43,8 @@ public class SumOfSubsetRecursion{
       else return false;
     } 
 
-    boolean value1 = sumOfSubset(arr, index+1, sum - arr[0]); //include the first element;
-    boolean value2 = sumOfSubset(arr, index+1, sum); //exclude the first element
+    boolean value1 = isSubsetSum(arr, index+1, sum - arr[index]); //include the first element;
+    boolean value2 = isSubsetSum(arr, index+1, sum); //exclude the first element
 
     return value1 || value2; 
   }
