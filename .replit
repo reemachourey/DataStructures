@@ -1,2 +1,2 @@
 language = "java10"
-run = "/Arrays/SumOfSubsetRecursion.java"
+run = "Main.java"
